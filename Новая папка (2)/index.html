@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="UTF-8">
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="origin">
+<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navy.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Oswald:wght@400&family=Source+Sans+Pro:wght@300;400;600&display=swap">
+
+</head>
+<body>
+<div id="mainbox" class="all-wrapper">
+<header class="site-header noBounce">
+<a id="navbtn" onclick="getcategorypage(0)" class="main-nav__btn" style="background:url(images/logo.jpeg) no-repeat;background-size:30px;background-position:center;"></a>
+<div class="title">
+<h1 class="title__inner">
+<p class="title__link">LIQUIDSTORE</p>
+</h1>
+</div>
+<div class="search">
+<button class="search__btn"></button>
+<div class="search__layout">
+<div class="search__header">
+<a onclick="getcategorypage(0)" class="main-nav__btn" style="background:url(images/logo.png) no-repeat;background-size:30px;background-position:center;"></a><p>#БЕЗОГНЯ AUTO</p>
+</div>
+</div>
+<div class="search__filters">
+<form id="filtersform" action="" onsubmit="return getfilterspage()">
+<input type="hidden" name="filter" value="0">
+<input type="hidden" name="idcat" value="0">
+<input type="hidden" name="idtg" value="0">
+<div class="region-filter cf">
+<p class="heading">Ключевые слова</p>
+<div class="query-filter__inner">
+<input type="text" name="query" value="" class="form-text" autocomplete="off" placeholder="" tabindex="-1" enterkeyhint="search">
+</div>
+</div>
+<div class="price-filter cf">
+<p class="heading">Цена</p>
+<div class="price-filter__inner">
+<input type="text" name="pmin" value="" class="form-text" autocomplete="off" placeholder="от" tabindex="1">
+<input type="text" name="pmax" value="" class="form-text" autocomplete="off" placeholder="до" tabindex="2">
+</div>
+</div>
+<div class="region-filter cf">
+<p class="heading">Сортировка</p>
+<select name="sort">
+<option value="0">По рейтингу</option>
+<option value="1">По цене от меньшей</option>
+<option value="2">По цене от большей</option>
+</select>
+</div>
+<div class="manufacturer cf">
+<p class="heading">Теги</p>
+<div id="tags_box" class="manufacturer__inner has-hidden">
+<label data-weight="70"><input type="checkbox" id="жидкости" name="tags[]" value="жидкости">
+<span class="label">#ЖИДКОСТИ (70)</span>
+</label>
+<label data-weight="25"><input type="checkbox" id="под_системы" name="tags[]" value="под_системы">
+<span class="label">#ПОД СИСТЕМЫ (25)</span>
+</label>
+<label data-weight="23"><input type="checkbox" id="одноразки" name="tags[]" value="одноразки">
+<span class="label">#ОДНОРАЗКИ (23)</span>
+</label>
+<label data-weight="20"><input type="checkbox" id="жевательный_табак" name="tags[]" value="жевательный_табак">
+<span class="label">#ЖЕВАТЕЛЬНЫЙ ТАБАК (20)</span>
+</label>
+<label data-weight="6"><input type="checkbox" id="расходники" name="tags[]" value="расходники">
+<span class="label">#РАСХОДНИКИ (6)</span>
+</label>
+</div>
+</div>
+<input type="hidden" name="disc" value="0">
+<input type="hidden" name="favs" value="0">
+<input type="hidden" name="page" value="0">
+<div class="clear20"></div>
+<button type="submit" class="submit-filters" style="margin:0">Применить</button>
+<div class="clear20"></div>
+</form>
+</div>
+</div>
+</header>
+
+<main role="main" class="main-content cf catalog-page">
+
+
+<ul class="catalog-node" style="margin-top:5px">
+<li>
+<div class="inner">
+<a onclick="getcategorypage(11828)" class="catalog-node__link">
+<div class="catalog-node__img">
+<img src="images/cat11828.webp">
+</div>
+<div class="catalog-node__title category"><span>ЖИДКОСТИ</span></div>
+</a>
+</div>
+</li>
+<li>
+<div class="inner">
+<a onclick="getcategorypage(11842)" class="catalog-node__link">
+<div class="catalog-node__img">
+<img src="images/cat11842.webp">
+</div>
+<div class="catalog-node__title category"><span>РАСХОДНИКИ</span></div>
+</a>
+</div>
+</li>
+<li>
+<div class="inner">
+<a onclick="getcategorypage(11843)" class="catalog-node__link">
+<div class="catalog-node__img">
+<img src="images/cat11843.webp">
+</div>
+<div class="catalog-node__title category"><span>ПОД-СИСТЕМЫ</span></div>
+</a>
+</div>
+</li>
+<li>
+<div class="inner">
+<a onclick="getcategorypage(11844)" class="catalog-node__link">
+<div class="catalog-node__img">
+<img src="images/cat11844.webp">
+</div>
+<div class="catalog-node__title category"><span>ОДНОРАЗКИ</span></div>
+</a>
+</div>
+</li>
+<li>
+<div class="inner">
+<a onclick="getcategorypage(11845)" class="catalog-node__link">
+<div class="catalog-node__img">
+<img src="images/cat11845.webp">
+</div>
+<div class="catalog-node__title category"><span>ЖЕВАТЕЛЬНЫЙ ТАБАК</span></div>
+</a>
+</div>
+</li>
+</ul>
+
+<div id="offersbox">
+</div>
+
+
+</main>
+</div>
+<footer class="site-footer cf">
+<div class="footer__bottom-item">
+<a onclick="getdiscountspage()"><img width="24" height="24" src="images/discount.svg"><span>Скидки</span></a>
+</div>
+<div class="footer__bottom-item">
+<a id="favsbtn" onclick="getfavoritespage()"><img width="24" height="24" src="images/heart.svg"><span>Избранное</span></a>
+</div>
+<div class="footer__bottom-item">
+<a onclick="getcategorypage(0)"><img width="24" height="24" src="images/home.svg"><span>Главная</span></a>
+</div>
+<div class="footer__bottom-item">
+<a id="cartbtn" onclick="getbasketpage()"><img width="24" height="24" src="images/cart.svg"><span>Корзина</span></a>
+</div>
+<div class="footer__bottom-item">
+<a onclick="getprofilepage()"><img width="24" height="24" src="images/user.svg"><span>Профиль</span></a>
+</div>
+</footer>
+<div class="loader"><img src="images/loader.gif"></div>
+<div class="shadow"></div>
+<div id="popupbox" class="popup hidden">
+</div>
+<script defer="" type="text/javascript" src="js/jquery.js"></script>
+<script defer="" type="text/javascript" src="js/jquery-cookie.js"></script>
+<script defer="" type="text/javascript" src="js/jquery-smartphoto.js"></script>
+<script defer="" type="text/javascript" src="js/swiped-events.js"></script>
+<script defer="" type="text/javascript" src="js/jquery-suggest.js"></script>
+<script defer="" type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">var idbot=1881,w18p=1;</script>
+</body></html>
